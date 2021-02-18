@@ -6,3 +6,9 @@ pineapple lang 是一个简单的编程语言 demo. 它包含了个手写的递�
 
 本项目是 pineapple lang 的 PHP 实现
 
+## 贡献者
+ - [karminski](https://github.com/karminski)
+ - [Y!an](https://github.com/YianAndCode)
+
+## 开源协议
+ - [MIT](LICENSE)
