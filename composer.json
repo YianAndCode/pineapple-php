@@ -1,0 +1,22 @@
+{
+    "name": "yian/pineapple-php",
+    "description": "PINEAPPLE Lang",
+    "authors": [
+        {
+            "name": "Y!an",
+            "email": "i@yian.me",
+            "homepage": "https://yian.me/"
+        }
+    ],
+    "type": "project",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Pineapple\\": "src/"
+        },
+        "files": [
+            "src/definitions.php"
+        ]
+    }
+}
