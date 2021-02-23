@@ -5,7 +5,10 @@ pineapple lang 是一个简单的编程语言 demo。它包含了个手写的递
 **本项目是 pineapple lang 的 PHP 实现**
 
 ## 运行
-*🚧 Under construction 🚧*
+```bash
+composer dump-autoload
+./bin/pineapple-php ./examples/hello-world.pineapple
+```
 
 ## 小教程
 
