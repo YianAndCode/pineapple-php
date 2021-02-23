@@ -29,3 +29,19 @@ const TokenNameMap = [
 const Keywords = [
     "print" => TOKEN_PRINT,
 ];
+
+const RegexName = "/^[_\d\w]+/";
+
+class Token
+{
+    public $lineNum;
+    public $tokenType;
+    public $token;
+
+    public function __construct(int $lineNum = 0, int $tokenType = 0, string $token = '')
+    {
+        $this->lineNum   = $lineNum;
+        $this->tokenType = $tokenType;
+        $this->token     = $token;
+    }
+}
