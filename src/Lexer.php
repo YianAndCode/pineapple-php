@@ -24,7 +24,7 @@ class Lexer
         return $this->lineNum;
     }
 
-    public function nextTokenIs(int $tokenType)
+    public function nextTokenIs(int $tokenType): Token
     {
         $nextToken = $this->getNextToken();
         if ($tokenType != $nextToken->tokenType) {
@@ -36,6 +36,8 @@ class Lexer
             );
             throw new \Exception($err);
         }
+
+        return $nextToken;
     }
 
     public function lookAheadAndSkip(int $expectedType)
