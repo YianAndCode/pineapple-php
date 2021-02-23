@@ -34,8 +34,19 @@ const RegexName = "/^[_\d\w]+/";
 
 class Token
 {
+    /**
+     * @var int
+     */
     public $lineNum;
+
+    /**
+     * @var int
+     */
     public $tokenType;
+
+    /**
+     * @var string
+     */
     public $token;
 
     public function __construct(int $lineNum = 0, int $tokenType = 0, string $token = '')
@@ -43,5 +54,71 @@ class Token
         $this->lineNum   = $lineNum;
         $this->tokenType = $tokenType;
         $this->token     = $token;
+    }
+}
+
+class Variable
+{
+    /**
+     * @var int
+     */
+    public $lineNum;
+
+    /**
+     * @var string
+     */
+    public $name;
+}
+
+interface Statement
+{
+}
+
+class AssignmentStatement implements Statement
+{
+    /**
+     * @var int
+     */
+    public $lineNum;
+
+    /**
+     * @var Variable
+     */
+    public $variable;
+
+    /**
+     * @var string
+     */
+    public $string;
+}
+
+class PrintStatement implements Statement
+{
+    /**
+     * @var int
+     */
+    public $lineNum;
+
+    /**
+     * @var Variable
+     */
+    public $variable;
+}
+
+class SourceCode
+{
+    /**
+     * @var int
+     */
+    public $lineNum;
+
+    /**
+     * @var Statement[]
+     */
+    public $statements;
+
+    public function __construct()
+    {
+        $this->statements = [];
     }
 }
