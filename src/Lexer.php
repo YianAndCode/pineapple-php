@@ -130,7 +130,7 @@ class Lexer
         throw new \Exception('Unreachable!');
     }
 
-    private function scanBeforeToken(string $token): string
+    public function scanBeforeToken(string $token): string
     {
         $s = explode($token, $this->sourceCode);
         if (count($s) < 2) {
