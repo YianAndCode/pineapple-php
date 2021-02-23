@@ -8,7 +8,7 @@ class Backend
 
     private $globalVar;
 
-    public function Execute(string $sourceCode)
+    public function execute(string $sourceCode)
     {
         $parser = new Parser($sourceCode);
 
@@ -33,7 +33,7 @@ class Backend
     {
         if ($statement instanceof AssignmentStatement) {
             $this->resolveAssignment($statement);
-        } else if ($statement instanceof PrintStatement) {
+        } elseif ($statement instanceof PrintStatement) {
             $this->resolvePrint($statement);
         } else {
             throw new \Exception('resolveStatement(): undefined statement type.');

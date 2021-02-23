@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Pineapple\Backend;
+
+if (count($argv) != 2) {
+    echo sprintf("Usage: %s filename\n", $argv[0]);
+    return;
+}
+
+$filename = $argv[1];
+if (! file_exists($filename)) {
+    echo "File not exists.\n";
+    return;
+}
+
+$code = file_get_contents($filename);
+$backend = new Backend;
+$backend->execute($code);
