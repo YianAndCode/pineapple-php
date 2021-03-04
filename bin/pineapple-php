@@ -19,4 +19,9 @@ if (! file_exists($filename)) {
 
 $code = file_get_contents($filename);
 $backend = new Backend;
-$backend->execute($code);
+
+try {
+    $backend->execute($code);
+} catch (\Exception $e) {
+    die($e->getMessage());
+}
