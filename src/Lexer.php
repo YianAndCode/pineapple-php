@@ -30,7 +30,7 @@ class Lexer
         if ($tokenType != $nextToken->tokenType) {
             $err = sprintf(
                 "NextTokenIs(): syntax error near '%s', expected token: {%s} but got {%s}.",
-                $nextToken->lineNum,
+                $nextToken->token,
                 TokenNameMap[$tokenType],
                 TokenNameMap[$nextToken->tokenType]
             );
